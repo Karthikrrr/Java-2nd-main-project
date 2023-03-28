@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>E-com - time to shop</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/CSS/style.css" rel="stylesheet" />
+        <link href="/CSS/SIGNIN.css" rel="stylesheet" />
+    </head>
+    <body style="background-color: white;">
+        <!-- Navigation-->
+         <nav class="navbar navbar-expand-lg navbar-light " >
+            <div class="container px-4 px-lg-5">
+                <img class="mylog" src="/images/ecommerce.png"><h1>E-com</h1>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link" href"@{/add-category}">Add category</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@{/add-products}">Add products</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/category}">Go to Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/admin/Alladmins}">View All admins</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/admin/Alladmins/new-admin}">Add new admin</a></li>
+                    </ul>
+                </div>
+            </div>
+         </nav>
+        <center>
+  <div class="container" style="background-color: white;">
+		<h1>Existing Category</h1>
+			
+	<label for="email"><b>Category name</b></label>
+    <input type="text" placeholder="Enter category" name="name" required>
+    
+    <label for="email"><b>Category </b></label>
+    <input type="text" placeholder="Enter name" name="name"  required>
+          </div>
+		</center>
+    </body>
+</html>

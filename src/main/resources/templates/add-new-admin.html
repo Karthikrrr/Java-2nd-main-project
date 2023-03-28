@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+.container {
+
+    padding: 50px;
+  background-color: lightblue;
+}
+
+
+input[type=text]:focus,input[type=email]:focus , input[type=password]:focus,input[type=checkbox]:focus{
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+	<center>
+<form th:action="@{/admin/Alladmins/new-admin/save-new-user}" method="post" th:object="${addadmin}" style="width: 70%;">
+  <div class="container">
+  <center>  <h1>New admin </h1> </center>
+  <hr>
+  
+  <label> <b>Firstname:</b></label> 
+<input type="text" style="width: 30%;" th:field="*{firstname}" name="firstname" placeholder= "Firstname" required minlength="2" maxlength="45"/> 
+<br><br><br>
+
+<label> <b>Lastname:</b></label>  
+<input type="text" style="width: 30%;" th:field="*{lastname}" name="lastname" placeholder="Lastname" required /> 
+<br><br><br>
+
+
+<label> <b>E-mail:</b></label>
+<input type="email" style="width: 30%;" th:field="*{email}" name="middlename" placeholder="E-mail" required minlength="8" maxlength="45" /> 
+<br><br><br>
+
+<label><b>Password:</b></label> 
+<input type="password" style="width: 30%;" th:field="*{password}" name="middlename" placeholder="password" required minlength="8" maxlength="15" /> 
+<br><br><br>
+
+  <div style="margin-right: 150px;">
+	  <input type="checkbox"  th:field="*{enabled}" name="middlename" placeholder="E-mail" required /> 
+<label> <b>Enabled</b></label> 
+<br><br>
+  </div>
+   <button type="submit" style="width: 30%;" class="registerbtn">save-admin</button>    
+   <button type="submit" onclick="cancleForm()" style="width: 30%; background-color: black;" class="registerbtn">cancel</button>  
+<div>
+</div>
+<div>
+</div>
+  </div>
+</form>
+
+</center>
+<script type="text/javascript">
+	function cancleForm(){
+		
+		window.location = "[[@{/admin/Alladmins}]]"
+	}
+	
+</script>
+</body>
+</html> 
